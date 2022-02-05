@@ -1,4 +1,4 @@
-name: CI
+name: epan.yml
  
 on: [workflow_dispatch]
  
