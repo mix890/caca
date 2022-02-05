@@ -5,7 +5,7 @@ on: [workflow_dispatch]
 jobs:
   build:
     name: epand
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
       fail-fast: false
