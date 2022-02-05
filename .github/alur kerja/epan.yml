@@ -1,4 +1,4 @@
-name: epandi
+name: CI
  
 on: [workflow_dispatch]
  
